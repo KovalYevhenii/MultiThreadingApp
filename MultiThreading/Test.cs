@@ -11,7 +11,6 @@ internal class Test
         Thread thread = new(() =>
         {
             var res = data.Sum(x => (long)x);
-
         });
         thread.Start();
     }
