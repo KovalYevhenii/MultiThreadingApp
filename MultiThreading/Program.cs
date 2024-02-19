@@ -13,8 +13,8 @@ internal class Program
         foreach (var dataSize in dataSizes)
         {
             int[] data = Enumerable.Range(0, dataSize).ToArray();
-            //Test.MeasureExecutionTime("Simple Sum", () => Test.SimpleSum(data));
-            //Test.MeasureExecutionTime("Sum Parallel", () => Test.SimpleSumParallel(data));
+            Test.MeasureExecutionTime("Simple Sum", () => Test.SimpleSum(data));
+            Test.MeasureExecutionTime("Sum Parallel", () => Test.SimpleSumParallel(data));
             Test.MeasureExecutionTime("Sum Plinq", () => Test.SimpleSumPlinq(data));
         }
     }
